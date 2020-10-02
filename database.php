@@ -43,7 +43,6 @@ echo "Failed to connect to MySQL: " . mysqli_connect_error();
 	return $oneresult;
 	}
 
-	
 	public function moveToArchive($rid){
 	$deleterecord=mysqli_query($this->dbh,"INSERT INTO archive (head,category,post,image)SELECT head,category,post,image FROM post WHERE $posting_date = $post; DELETE FROM post WHERE $posting_date = $post");
 	return $deleterecord;
